@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TXT to PDF Converter Online | SomehowConvert</title>
+<meta name="description" content="Convert TXT text files to PDF online for free. Preview and download the generated PDF.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-source="TXT" data-target="PDF">
+<header>
+  <div class="header">
+    <a class="logo" href="../">Quick<span>Tools</span></a>
+  </div>
+</header>
+
+<main class="container">
+  <section id="converter" class="converter active">
+    <h1 id="converterTitle">File Converter</h1>
+    <p class="subtitle" id="converterDescription">Choose a file and convert it.</p>
+
+    <div class="panel">
+      <div class="ad-space"></div>
+
+      <div id="dropzone" class="dropzone">
+        <div class="drop-title">Choose File</div>
+        <div class="drop-subtitle">or drag and drop your file here</div>
+        <input id="fileInput" type="file" hidden>
+      </div>
+
+      <div id="fileInfo" class="file-info">
+        <strong id="fileName"></strong><br>
+        <span id="fileSize"></span>
+      </div>
+
+      <div id="normalOptions">
+        <label>Convert to</label>
+        <div id="formats" class="format-grid"></div>
+
+        <label>Output File Name</label>
+        <input id="outputName" type="text" value="converted-file">
+      </div>
+
+      <div id="imageOptions" style="display:none">
+        <div class="options">
+          <div class="option-box" id="qualityBox">
+            <label>Image Quality</label>
+            <div class="range-row">
+              <input id="quality" type="range" min="1" max="100" value="85">
+              <span id="qualityValue" class="range-value">85%</span>
+            </div>
+            <div class="info">Higher quality normally means a larger file. Lower quality normally means a smaller file.</div>
+          </div>
+
+          <div class="option-box" id="resizeBox">
+            <label>Width</label>
+            <input id="resizeWidth" type="number" min="1" placeholder="Original width">
+            <div class="info" id="originalDimensions">Choose an image to see dimensions.</div>
+          </div>
+
+          <div class="option-box" id="heightBox">
+            <label>Height</label>
+            <input id="resizeHeight" type="number" min="1" placeholder="Original height">
+            <div class="check-row">
+              <input id="keepRatio" type="checkbox" checked>
+              <span>Keep aspect ratio</span>
+            </div>
+          </div>
+
+          <div class="option-box" id="rotateBox">
+            <label>Rotation</label>
+            <select id="rotation">
+              <option value="0">0°</option>
+              <option value="90">90°</option>
+              <option value="180">180°</option>
+              <option value="270">270°</option>
+            </select>
+            <label>Flip</label>
+            <select id="flip">
+              <option value="none">No Flip</option>
+              <option value="horizontal">Flip Horizontally</option>
+              <option value="vertical">Flip Vertically</option>
+            </select>
+          </div>
+        </div>
+
+        <label>Output File Name</label>
+        <input id="imageOutputName" type="text" value="edited-image">
+      </div>
+
+      <button id="convertButton" class="primary" onclick="startConversion()">Convert Now</button>
+
+      <div id="progress" class="progress">
+        <div class="progress-header">
+          <span id="progressStatus">Preparing...</span>
+          <span id="progressPercent">0%</span>
+        </div>
+        <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+        <div id="status" class="status"></div>
+      </div>
+
+      <div id="result" class="result">
+        <div id="resultMessage"></div>
+        <h3>Preview</h3>
+        <div id="preview" class="preview"></div>
+        <a id="download" class="download" href="#">Download File</a>
+        <button class="new-file" onclick="resetConverter()">Convert Another File</button>
+      </div>
+
+      <a class="back" href="../">← Back to all tools</a>
+    </div>
+
+    <section class="seo-content">
+      <h2 id="seoHeading">Free Online File Tool</h2>
+      <p id="seoText">Use SomehowConvert to process your file directly in your browser. No login is required for these browser-based tools.</p>
+      <h2>How to use this tool</h2>
+      <ol>
+        <li>Choose a file or drag and drop it into the upload area.</li>
+        <li>Select the available output option if the tool provides one.</li>
+        <li>Click <strong>Convert Now</strong>.</li>
+        <li>Preview the result and download the converted file.</li>
+      </ol>
+      <p>Files processed by these browser-based tools are handled locally by your browser for supported conversions.</p>
+    </section>
+  </section>
+</main>
+
+<footer>SomehowConvert</footer>
+<script src="../assets/tools.js" defer></script>
+</body>
+</html>
