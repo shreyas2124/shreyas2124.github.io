@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shreyas2124.github.io/somehowconvert/sitemap.xml
+Sitemap: https://shreyas2124.github.io/sitemap.xml
